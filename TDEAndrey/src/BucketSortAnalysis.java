@@ -33,11 +33,11 @@ public class BucketSortAnalysis {
                 copiaTotal += copiaContador;
                 iteracaoTotal += iteracaoContador;
 
-                System.out.printf("Rodada %d: Tempo = %d ns, Cópias = %d, Iterações = %d%n",
+                System.out.printf("Rodada %d: Tempo = %d ms, Cópias = %d, Iterações = %d%n",
                         i + 1, tempoExecucao, copiaContador, iteracaoContador);
             }
 
-            System.out.printf("Média para tamanho %d -> Tempo: %d ns, Cópias: %d, Iterações: %d%n%n",
+            System.out.printf("Média para tamanho %d -> Tempo: %d ms, Cópias: %d, Iterações: %d%n%n",
                     tamanho, tempoTotal / rodadas, copiaTotal / rodadas, iteracaoTotal / rodadas);
         }
     }
