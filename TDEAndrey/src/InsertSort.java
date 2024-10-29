@@ -22,20 +22,20 @@ public class InsertSort {
                 iteracaoContador = 0;
 
                 // Medir tempo de execução
-                long inicio = System.nanoTime();
+                long inicio = System.currentTimeMillis();
                 insertionSort(vetor);
-                long fim = System.nanoTime();
+                long fim = System.currentTimeMillis();
 
                 long tempoExecucao = fim - inicio;
                 tempoTotal += tempoExecucao;
                 copiaTotal += copiaContador;
                 iteracaoTotal += iteracaoContador;
 
-                System.out.printf("Rodada %d: Tempo = %d ns, Cópias = %d, Iterações = %d%n",
+                System.out.printf("Rodada %d: Tempo = %d ms, Cópias = %d, Iterações = %d%n",
                         i + 1, tempoExecucao, copiaContador, iteracaoContador);
             }
 
-            System.out.printf("Média para tamanho %d -> Tempo: %d ns, Cópias: %d, Iterações: %d%n%n",
+            System.out.printf("Média para tamanho %d -> Tempo: %d ms, Cópias: %d, Iterações: %d%n%n",
                     tamanho, tempoTotal / rodadas, copiaTotal / rodadas, iteracaoTotal / rodadas);
         }
     }
