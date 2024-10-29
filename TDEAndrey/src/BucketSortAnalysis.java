@@ -24,9 +24,9 @@ public class BucketSortAnalysis {
                 iteracaoContador = 0;
 
                 // Medir tempo de execução
-                long inicio = System.nanoTime();
+                long inicio = System.currentTimeMillis();
                 bucketSort(vetor);
-                long fim = System.nanoTime();
+                long fim = System.currentTimeMillis();
 
                 long tempoExecucao = fim - inicio;
                 tempoTotal += tempoExecucao;
